@@ -15,7 +15,7 @@ Contents:
    
    preface
    chapters/*
-   aboutme
+   about
    roadmap
 
 --------------
