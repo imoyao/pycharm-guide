@@ -3,7 +3,7 @@
 ==============
 
 * 姓名：     张牧志
-* 微信：     imoyao
+* 微信：     idealyard
 * 公众号：   别院牧志
 * Email：    emailme8@163.com
 * GitHub：   https://github.com/imoyao
