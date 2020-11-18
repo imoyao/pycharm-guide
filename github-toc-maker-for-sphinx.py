@@ -13,12 +13,14 @@ def get_chapter_name(file):
 
     return chapter_name
 
+
 def get_title(file):
     with open(file) as f:
         first_line = f.readline()
 
     if first_line.startswith("#"):
         return first_line[1:].strip()
+
 
 def generate_mapping():
     mapping = dict.fromkeys([os.path.basename(chapter_path) for chapter_path in all_chapters_path])
@@ -27,6 +29,7 @@ def generate_mapping():
         mapping[key] = get_chapter_name(chapter_file)
 
     return mapping
+
 
 def get_toc_info():
     toc = {}
@@ -40,7 +43,7 @@ def get_toc_info():
             file_name = os.path.basename(file)
             section = int(re.findall(r"c\d{2}_(\d{2}).md", file_name)[0])
 
-            #md_path = os.path.join("./source/", dir_name, file_name)
+            # md_path = os.path.join("./source/", dir_name, file_name)
             md_path = os.path.join("http://pycharm.iswbm.com/zh_CN/latest/", dir_name, file_name.replace("md", "html"))
             title = get_title(file)
             if not title:
@@ -52,20 +55,23 @@ def get_toc_info():
 
     return toc
 
+
 def print_md_toc(toc_info, mapping):
     for chapter in sorted(toc_info.items(), key=lambda item: item[0]):
         posts = chapter[1]
         chapter_name = mapping[chapter[0]]
         print(f"- **{chapter_name}**")
-        for post in sorted(posts.items(), key=lambda item:item[0]):
+        for post in sorted(posts.items(), key=lambda item: item[0]):
             # print title only 
             # print(f"{post[1][0]}")
             print("  ", f"* [{post[1][0]}]({post[1][1]})")
+
 
 def main():
     mapping = generate_mapping()
     toc_info = get_toc_info()
     print_md_toc(toc_info, mapping)
+
 
 if __name__ == '__main__':
     main()

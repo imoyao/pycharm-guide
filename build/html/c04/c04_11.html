@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.11 【高效编辑 11】输出结果美化：Show as JSON &mdash; PyCharm 中文指南 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/baidutongji.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4.12 【高效编辑 12】显示上下文信息" href="c04_12.html" />
+    <link rel="prev" title="4.10 【高效编辑 10】自动纠正与自动补全" href="c04_10.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> PyCharm 中文指南
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p01.html">第一章：下载与安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p02.html">第二章：调试与运行</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p03.html">第三章：界面与排版</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chapters/p04.html">第四章：代码的编辑</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="c04_01.html">4.1 【高效编辑 01】重写父类方法的正确姿势</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c04_02.html">4.2 【高效编辑 02】缩进和反缩进</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c04_03.html">4.3 【高效编辑 03】实现接口方法的正确姿势</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c04_04.html">4.4 【高效编辑 04】快速开启新的一行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c04_05.html">4.5 【高效编辑 05】变量名一键实现大小写的转换</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c04_06.html">4.6 【高效编辑 06】代码块实现随处折叠</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c04_07.html">4.7 【高效编辑 07】删除与剪切的技巧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c04_08.html">4.8 【高效编辑 08】历史剪切板的使用：Paste from History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c04_09.html">4.9 【高效编辑 09】使用函数时，快速查看该函数有哪些参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c04_10.html">4.10 【高效编辑 10】自动纠正与自动补全</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.11 【高效编辑 11】输出结果美化：Show as JSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c04_12.html">4.12 【高效编辑 12】显示上下文信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c04_13.html">4.13 【高效编辑 13】一键预览模块的文档</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p05.html">第五章：快捷与效率</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p06.html">第六章：搜索与导航</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p07.html">第七章：版本与管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p08.html">第八章：插件与工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p09.html">第九章：常用的技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutme.html">关于作者</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Roadmap</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PyCharm 中文指南</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../chapters/p04.html">第四章：代码的编辑</a> &raquo;</li>
+        
+      <li>4.11 【高效编辑 11】输出结果美化：Show as JSON</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/c04/c04_11.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="show-as-json">
+<h1>4.11 【高效编辑 11】输出结果美化：Show as JSON<a class="headerlink" href="#show-as-json" title="Permalink to this headline">¶</a></h1>
+<p><img alt="image0" src="http://image.iswbm.com/20200804124133.png" /></p>
+<p>当你使用 PyCharm 运行程序后，如果打印了 JSON
+字符串，对于人的肉眼来说是很不友好的。</p>
+<p>比如这样一段代码</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">member</span> <span class="o">=</span> <span class="s1">&#39;{&quot;name&quot;:&quot;xiaoming&quot;, &quot;gender&quot;: &quot;male&quot;, &quot;age&quot;: 18}&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">member</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>这时候可以在输出窗口点击右键，选择 <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">as</span> <span class="pre">JSON</span></code>， PyCharm
+就会新开一个临时文件显示被格式化过的 JSON 字符串</p>
+<p><img alt="image1" src="http://image.iswbm.com/20200826084710.png" /></p>
+<p>这个功能在较低版本的 PyCharm 中是没有的。</p>
+<p>同时，我发现这个功能有两个缺点</p>
+<p>1、只能美化打印的 JSON 字符串，在美化打印的字典时，会有一点问题。</p>
+<p>比如这样一段代码</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">member</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;xiaoming&quot;</span><span class="p">,</span> <span class="s2">&quot;gender&quot;</span><span class="p">:</span> <span class="s2">&quot;male&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">member</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="image2" src="http://image.iswbm.com/20200826085228.png" /></p>
+<p>2、打印的 JSON 字符串里不能有 <code class="docutils literal notranslate"><span class="pre">[]</span></code>，不然解析会有问题</p>
+<p><img alt="image3" src="http://image.iswbm.com/20200826085448.png" /></p>
+<hr class="docutils" />
+<p><img alt="image4" src="https://open.weixin.qq.com/qr/code?username=idealyard" /></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="c04_12.html" class="btn btn-neutral float-right" title="4.12 【高效编辑 12】显示上下文信息" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="c04_10.html" class="btn btn-neutral float-left" title="4.10 【高效编辑 10】自动纠正与自动补全" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Python编程时光
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

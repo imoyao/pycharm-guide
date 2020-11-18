@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.2 【运行技巧 02】通过指定参数，执行程序 &mdash; PyCharm 中文指南 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/baidutongji.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.3 【调试技巧 01】超详细图文教你调试代码" href="c02_03.html" />
+    <link rel="prev" title="2.1 【运行技巧 01】运行 Python 的四种方式" href="c02_01.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> PyCharm 中文指南
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p01.html">第一章：下载与安装</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chapters/p02.html">第二章：调试与运行</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="c02_01.html">2.1 【运行技巧 01】运行 Python 的四种方式</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2 【运行技巧 02】通过指定参数，执行程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c02_03.html">2.3 【调试技巧 01】超详细图文教你调试代码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c02_04.html">2.4 【调试技巧 02】程序结束了，照样可以调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c02_05.html">2.5 【调试技巧 03】7 步实现远程代码调试</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p03.html">第三章：界面与排版</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p04.html">第四章：代码的编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p05.html">第五章：快捷与效率</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p06.html">第六章：搜索与导航</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p07.html">第七章：版本与管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p08.html">第八章：插件与工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p09.html">第九章：常用的技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutme.html">关于作者</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Roadmap</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PyCharm 中文指南</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../chapters/p02.html">第二章：调试与运行</a> &raquo;</li>
+        
+      <li>2.2 【运行技巧 02】通过指定参数，执行程序</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/c02/c02_02.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>2.2 【运行技巧 02】通过指定参数，执行程序<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p><img alt="image0" src="http://image.iswbm.com/20200804124133.png" /></p>
+<p>你在 Pycharm 运行你的项目，通常是怎么执行的？我的做法是，右键，然后点击
+<code class="docutils literal notranslate"><span class="pre">Run</span></code>，或者使用快捷键 <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">F10</span></code> 。</p>
+<p>有时候，在运行/调试脚本的时候，我们需要指定一些参数，这在命令行中，直接指定即可。</p>
+<p>假设在命令行中，运行脚本的命令是这样</p>
+<div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="n">init</span> <span class="o">--</span><span class="n">local</span>
+</pre></div>
+</div>
+<p>对于刚使用 Pycharm 的同学，可能并不知道 Pycharm
+也是可以指定参数的。点击下图位置</p>
+<p><img alt="image1" src="http://image.iswbm.com/FmfL3r0iWx_srT_xMASBEp1ZaaId" /></p>
+<p>进入设置面板，在 <code class="docutils literal notranslate"><span class="pre">Script</span> <span class="pre">parameters</span></code> 中填入参数即可。</p>
+<p><img alt="image2" src="http://image.iswbm.com/FujczKwTUPa8l5EEmS0eoh-zL1Nk" /></p>
+<p>同时在上图的底部，你可以看到，这里可以很方便的切换
+解释器，比你跑到这边来要容易得多吧</p>
+<p><img alt="image3" src="http://image.iswbm.com/Fq60WOdcRJopqV6MVoRcIuZclYKx" /></p>
+<p><img alt="image4" src="https://open.weixin.qq.com/qr/code?username=idealyard" /></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="c02_03.html" class="btn btn-neutral float-right" title="2.3 【调试技巧 01】超详细图文教你调试代码" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="c02_01.html" class="btn btn-neutral float-left" title="2.1 【运行技巧 01】运行 Python 的四种方式" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Python编程时光
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.7 【提高效率 07】代码封装，一步到位 &mdash; PyCharm 中文指南 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/baidutongji.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="第六章：搜索与导航" href="../chapters/p06.html" />
+    <link rel="prev" title="5.6 【提高效率 06】代码模板，效率编码" href="c05_06.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> PyCharm 中文指南
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p01.html">第一章：下载与安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p02.html">第二章：调试与运行</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p03.html">第三章：界面与排版</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p04.html">第四章：代码的编辑</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chapters/p05.html">第五章：快捷与效率</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="c05_01.html">5.1 【提高效率 01】复杂操作，录制成宏</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c05_02.html">5.2 【提高效率 02】使用收藏夹，收藏关键代码位</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c05_03.html">5.3 【提高效率 03】一套快捷键，精准打开工具栏</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c05_04.html">5.4 【提高效率 04】使用模板，快速捕获异常</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c05_05.html">5.5 【提高效率 05】快速输入自定义代码片段</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c05_06.html">5.6 【提高效率 06】代码模板，效率编码</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.7 【提高效率 07】代码封装，一步到位</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p06.html">第六章：搜索与导航</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p07.html">第七章：版本与管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p08.html">第八章：插件与工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p09.html">第九章：常用的技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutme.html">关于作者</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Roadmap</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PyCharm 中文指南</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../chapters/p05.html">第五章：快捷与效率</a> &raquo;</li>
+        
+      <li>5.7 【提高效率 07】代码封装，一步到位</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/c05/c05_07.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>5.7 【提高效率 07】代码封装，一步到位<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p><img alt="image0" src="http://image.iswbm.com/20200804124133.png" /></p>
+<p>当一个主函数的代码行数越来越多时，代码的可读性会变得越来越差。通常的做法，是按照功能将代码进行封装成多个函数。</p>
+<p>这个过程无非是</p>
+<ol class="arabic simple">
+<li>在合适的位置定义一个新的函数</li>
+<li>将原有的代码拷贝至该函数中</li>
+<li>并将原的代码替换成该函数的调用</li>
+</ol>
+<p>倘若你的重构的工作量不是很大，完全可以手工来完成这些事。</p>
+<p>但当你是在重构一个项目代码时，你可能需要一个更高效的封装技巧。</p>
+<p>在 PyCharm
+中，提供了多种形式的代码重构快捷方法，大家比较常见的可能是重构变量名：shift+F6，而今天要给大家介绍的是方法的重构，也即代码快速封装的技巧。</p>
+<p>假如，我现在有如下一段代码，红框标出的代码放在主函数中，有些不太合适，况且这段代码不能让人一眼就看出它是在做什么事情。如何将其进行封装，对我们理清整个主程序的逻辑会有帮助。</p>
+<p><img alt="image1" src="http://image.iswbm.com/20191222141905.png" /></p>
+<p>选中你要封装的代码，然后按住 <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code>+<code class="docutils literal notranslate"><span class="pre">Alt</span></code>+<code class="docutils literal notranslate"><span class="pre">M</span></code>
+后，会跳出如下界面，根据自己的需要，修改函数名，选择参数和返回值</p>
+<p><img alt="image2" src="http://image.iswbm.com/20191222141955.png" /></p>
+<p>一切就绪点击 <code class="docutils literal notranslate"><span class="pre">OK</span></code>，PyCharm
+会自动在合适的位置为你定义一个函数名，并将你选中的代码放到里面，其中参数名和返回值也都是按照你的要求，效果如下：</p>
+<p><img alt="image3" src="http://image.iswbm.com/20191222142223.png" /></p>
+<p><img alt="image4" src="https://open.weixin.qq.com/qr/code?username=idealyard" /></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../chapters/p06.html" class="btn btn-neutral float-right" title="第六章：搜索与导航" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="c05_06.html" class="btn btn-neutral float-left" title="5.6 【提高效率 06】代码模板，效率编码" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Python编程时光
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

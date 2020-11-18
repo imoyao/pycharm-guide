@@ -4,9 +4,8 @@ import os
 import subprocess
 import platform
 
-
 osName = platform.system()
-repo_path ='.'
+repo_path = '.'
 if (osName == 'Windows'):
     repo_path = 'E:\\MING-Git\\pycharm-guide'
     blog_path = 'E:\\MING-Git\\pycharm-guide\\source'
@@ -15,8 +14,6 @@ elif (osName == 'Darwin'):
     repo_path = '/Users/MING/Github/pycharm-guide/'
     blog_path = '/Users/MING/Github/pycharm-guide/source'
     index_path = '/Users/MING/Github/pycharm-guide/README.md'
-
-
 
 base_link = "http://python.iswbm.com/en/latest/"
 readme_header = '''
@@ -53,19 +50,21 @@ def get_file_info(filename):
         first_line = file.readline().replace("#", "").strip()
     return first_line.split(' ', 1)
 
+
 def make_line(chapter, file):
     page_name, _ = os.path.splitext(file)
     (index, title) = get_file_info(file)
-    url = base_link  + chapter + "/" + page_name + ".html"
+    url = base_link + chapter + "/" + page_name + ".html"
     item_list = ["-", index, "[{}]({})\n".format(title, url)]
     return " ".join(item_list)
+
 
 def render_index_page(index_info):
     '''
     生成 readme.md 索引文件，包含所有文件目录
     '''
     # 重新排序
-    index_info = sorted(index_info.items(), key=lambda item:item[0], reverse=False)
+    index_info = sorted(index_info.items(), key=lambda item: item[0], reverse=False)
 
     # 写入文件
     with open(index_path, 'w+', encoding="utf-8") as file:
@@ -78,13 +77,14 @@ def render_index_page(index_info):
             file.write("\n")
         file.write(readme_tooter)
 
+
 def convert_md5_to_rst(file):
     '''
     转换格式：md5转换成rst
     '''
     (filename, extension) = os.path.splitext(file)
     convert_cmd = 'pandoc -V mainfont="SimSun" -f markdown -t rst {md_file} -o {rst_file}'.format(
-        md_file=filename+'.md', rst_file=filename+'.rst'
+        md_file=filename + '.md', rst_file=filename + '.rst'
     )
     # status, output = commands.getstatusoutput(convert_cmd)
     status = subprocess.call(convert_cmd.split(" "))
@@ -95,6 +95,7 @@ def convert_md5_to_rst(file):
         print(file + ' 处理完成')
     else:
         print(file + '处理失败')
+
 
 def get_all_dir():
     '''
@@ -122,6 +123,7 @@ def init_index_info():
             chapter_name = f.readlines()[1].strip()
         index_info[name.replace("p", "")] = {"name": chapter_name, "contents": []}
     return index_info
+
 
 def main(index_info):
     for folder in get_all_dir():

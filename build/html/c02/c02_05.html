@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.5 【调试技巧 03】7 步实现远程代码调试 &mdash; PyCharm 中文指南 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/baidutongji.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="第三章：界面与排版" href="../chapters/p03.html" />
+    <link rel="prev" title="2.4 【调试技巧 02】程序结束了，照样可以调试" href="c02_04.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> PyCharm 中文指南
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p01.html">第一章：下载与安装</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chapters/p02.html">第二章：调试与运行</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="c02_01.html">2.1 【运行技巧 01】运行 Python 的四种方式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c02_02.html">2.2 【运行技巧 02】通过指定参数，执行程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c02_03.html">2.3 【调试技巧 01】超详细图文教你调试代码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c02_04.html">2.4 【调试技巧 02】程序结束了，照样可以调试</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.5 【调试技巧 03】7 步实现远程代码调试</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">1. 新建一个项目</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2. 配置连接服务器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">3. 下载项目代码</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">4. 下载远程解释器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">5. 添加程序入口</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">6. 调试前设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">7. 开始调试代码</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">8. 友情提醒</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p03.html">第三章：界面与排版</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p04.html">第四章：代码的编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p05.html">第五章：快捷与效率</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p06.html">第六章：搜索与导航</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p07.html">第七章：版本与管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p08.html">第八章：插件与工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p09.html">第九章：常用的技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutme.html">关于作者</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Roadmap</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PyCharm 中文指南</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../chapters/p02.html">第二章：调试与运行</a> &raquo;</li>
+        
+      <li>2.5 【调试技巧 03】7 步实现远程代码调试</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/c02/c02_05.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>2.5 【调试技巧 03】7 步实现远程代码调试<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p><img alt="image0" src="http://image.iswbm.com/20200804124133.png" /></p>
+<p>一般情况下，我们开发调试都是在个人PC上完成，遇到问题，开一下 <code class="docutils literal notranslate"><span class="pre">Pycharm</span></code>
+的调试器，很快就能找到问题所在。</p>
+<p>可有些时候，项目代码的运行会对运行环境有依赖，必须在部署了相关依赖组件的服务器上才可以运行，这就直接导致了我们不能在本地进行调试。</p>
+<p>对于这种特殊的场景，就我所知，有如下两种解决方案：</p>
+<ul class="simple">
+<li>pdb</li>
+<li>远程调试</li>
+</ul>
+<p>关于
+pdb，之前也写过专门的文章介绍使用方法，你可以点此查看：<a class="reference external" href="https://mp.weixin.qq.com/s/tDufSUBrBBNfMEr5_dxM0g">无图形界面的代码调试方法
+- pdb</a></p>
+<p>而远程调试呢，是让我们可以在我们在 PC 上用 PyCharm
+的图形化界面来进行调试远方服务器上代码，它和本地调试没有太大的区别，原来怎么调试的现在还是怎么调试。</p>
+<p>区别就在于，本地调试不需要事前配置，只要你的代码准备好了，随时可以开始
+Debug
+，而远程调试呢，需要不少前置步骤，这也正是本篇文章的内容，教你如何配置远程调试环境。</p>
+<div class="section" id="id2">
+<h2>1. 新建一个项目<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>首先，要在Pycharm中新建一个空的项目，后面我们拉服务器上的项目代码就会放置在这个项目目录下。我这边的名字是
+NOVA，你可以自己定义。</p>
+<p><img alt="image1" src="http://image.iswbm.com/20190113104817.png" /></p>
+</div>
+<div class="section" id="id3">
+<h2>2. 配置连接服务器<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Tools -&gt; Deployment -&gt; configuration</p>
+<p><img alt="image2" src="http://image.iswbm.com/20190113105512.png" /></p>
+<p>添加一个<code class="docutils literal notranslate"><span class="pre">Server</span></code></p>
+<ul class="simple">
+<li>Name：填你的服务器的IP</li>
+<li>Type：设定为SFTP</li>
+</ul>
+<p><img alt="image3" src="http://image.iswbm.com/20190113105858.png" /></p>
+<p>点击<code class="docutils literal notranslate"><span class="pre">OK</span></code>后，进入如下界面，你可以按我的备注，填写信息：</p>
+<ul class="simple">
+<li>SFTP host：公网ip</li>
+<li>Port：服务器开放的ssh端口</li>
+<li>Root path：你要调试的项目代码目录</li>
+<li>Username：你登陆服务器所用的用户</li>
+<li>Auth type：登陆类型，若用密码登陆的就是Password</li>
+<li>Password：选密码登陆后，这边输入你的登陆密码，可以选择保存密码。</li>
+</ul>
+<p>这里请注意，要确保你的电脑可以ssh连接到你的服务器，不管是密钥登陆还是密码登陆，如果开启了白名单限制要先解除。</p>
+<p><img alt="image4" src="http://image.iswbm.com/20190113105931.png" /></p>
+<p>填写完成后，切换到<code class="docutils literal notranslate"><span class="pre">Mappings</span></code>选项卡，在箭头位置，填写<code class="docutils literal notranslate"><span class="pre">\</span></code></p>
+<p><img alt="image5" src="http://image.iswbm.com/20190113110928.png" /></p>
+<p>以上服务器信息配置，全部正确填写完成后，点击<code class="docutils literal notranslate"><span class="pre">OK</span></code></p>
+<p>接下来，我们要连接远程服务器了。 Tools -&gt; Deployment -&gt; Browse Remote
+Host</p>
+<p><img alt="image6" src="http://image.iswbm.com/20190113111042.png" /></p>
+</div>
+<div class="section" id="id4">
+<h2>3. 下载项目代码<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>如果之前填写的服务器登陆信息准确无误的话，现在就可以看到远程的项目代码。</p>
+<p><img alt="image7" src="http://image.iswbm.com/20190113111151.png" /></p>
+<p>选择下载远程代码要本地。</p>
+<p><img alt="image8" src="http://image.iswbm.com/20190113111217.png" /></p>
+<p>下载完成提示。</p>
+<p><img alt="image9" src="http://image.iswbm.com/20190113111248.png" /></p>
+<p>现在的IDE界面应该是这样子的。</p>
+<p><img alt="image10" src="http://image.iswbm.com/20190113111307.png" /></p>
+</div>
+<div class="section" id="id5">
+<h2>4. 下载远程解释器<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>为什么需要这步呢？</p>
+<p>远程调试是在远端的服务器上运行的，它除了依赖其他组件之外，还会有一些很多Python依赖包我们本地并没有。</p>
+<p>进入 File -&gt; Settings 按图示，添加远程解释器。</p>
+<p><img alt="image11" src="http://image.iswbm.com/20190113111747.png" /></p>
+<p>填写远程服务器信息，跟之前的一样，不再赘述。</p>
+<p><img alt="image12" src="http://image.iswbm.com/20190113111828.png" /></p>
+<p>点击<code class="docutils literal notranslate"><span class="pre">OK</span></code>后，会自动下载远程解释器。如果你的项目比较大，这个时间可能会比较久，请耐心等待。</p>
+</div>
+<div class="section" id="id6">
+<h2>5. 添加程序入口<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>因为我们要在本地DEBUG，所以你一定要知道你的项目的入口程序。如果这个入口程序已经包含在你的项目代码中，那么请略过这一步。</p>
+<p>如果没有，就请自己生成入口程序。</p>
+<p>比如，我这边的项目，在服务器上是以一个服务运行的。而我们都知道服务的入口是<code class="docutils literal notranslate"><span class="pre">Service文件</span></code>。
+<code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">/usr/lib/systemd/system/openstack-nova-compute.service</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Unit</span><span class="p">]</span>
+<span class="n">Description</span><span class="o">=</span><span class="n">OpenStack</span> <span class="n">Nova</span> <span class="n">Compute</span> <span class="n">Server</span>
+<span class="n">After</span><span class="o">=</span><span class="n">syslog</span><span class="o">.</span><span class="n">target</span> <span class="n">network</span><span class="o">.</span><span class="n">target</span> <span class="n">libvirtd</span><span class="o">.</span><span class="n">service</span>
+
+<span class="p">[</span><span class="n">Service</span><span class="p">]</span>
+<span class="n">Environment</span><span class="o">=</span><span class="n">LIBGUESTFS_ATTACH_METHOD</span><span class="o">=</span><span class="n">appliance</span>
+<span class="n">Type</span><span class="o">=</span><span class="n">notify</span>
+<span class="n">NotifyAccess</span><span class="o">=</span><span class="nb">all</span>
+<span class="n">TimeoutStartSec</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">Restart</span><span class="o">=</span><span class="n">always</span>
+<span class="n">User</span><span class="o">=</span><span class="n">nova</span>
+<span class="n">ExecStart</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">nova</span><span class="o">-</span><span class="n">compute</span>
+
+<span class="p">[</span><span class="n">Install</span><span class="p">]</span>
+<span class="n">WantedBy</span><span class="o">=</span><span class="n">multi</span><span class="o">-</span><span class="n">user</span><span class="o">.</span><span class="n">target</span>
+</pre></div>
+</div>
+<p>看到那个<code class="docutils literal notranslate"><span class="pre">ExecStart</span></code>没有？那个就是我们程序的入口。
+我们只要将其拷贝至我们的Pycharm中，并向远程同步该文件。</p>
+<p><img alt="image13" src="http://image.iswbm.com/20190113112004.png" /></p>
+</div>
+<div class="section" id="id7">
+<h2>6. 调试前设置<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>开启代码自动同步，这样，我们对代码的修改Pycharm都能识别，并且为我们提交到远程服务器。</p>
+<p><img alt="image14" src="http://image.iswbm.com/20190113112055.png" /></p>
+<p>开启
+<code class="docutils literal notranslate"><span class="pre">Gevent</span> <span class="pre">compatible</span></code>，如果不开启，在调试过程中，很可能出现无法调试，或者无法追踪/查看变量等问题。</p>
+<p><img alt="image15" src="http://image.iswbm.com/20190113113211.png" /></p>
+</div>
+<div class="section" id="id8">
+<h2>7. 开始调试代码<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>在你的程序入口文件处，点击右键，选择Debug即可。</p>
+<p>如果你的程序入口，需要引入参数，这是经常有的事，可以的这里配置。</p>
+<p><img alt="image16" src="http://image.iswbm.com/20190113112456.png" /></p>
+<p>配置完点击保存即可。</p>
+<p><img alt="image17" src="http://image.iswbm.com/20190113112649.png" /></p>
+</div>
+<div class="section" id="id9">
+<h2>8. 友情提醒<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>按照文章的试调试代码，会自动同步代码至远端，千万不要在生产环境使用，一定要在开发环境中使用，否则后果自负。</p>
+<p>调试工具给了程序员提供了很大的便利，但还是希望你不要过度依赖。尽量在每次写代码的时候，都追求一次成型，提高自己的编码能力。</p>
+<hr class="docutils" />
+<p><img alt="image18" src="https://open.weixin.qq.com/qr/code?username=idealyard" /></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../chapters/p03.html" class="btn btn-neutral float-right" title="第三章：界面与排版" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="c02_04.html" class="btn btn-neutral float-left" title="2.4 【调试技巧 02】程序结束了，照样可以调试" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Python编程时光
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

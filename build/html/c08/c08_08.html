@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.8 【绝佳工具 04】选择执行：Execute Selection in Console &mdash; PyCharm 中文指南 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/baidutongji.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8.9 【绝佳工具 05】一键进行代码性能分析" href="c08_09.html" />
+    <link rel="prev" title="8.7 【绝佳工具 03】HTTP接口调试：Test RESTful Web Service" href="c08_07.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> PyCharm 中文指南
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p01.html">第一章：下载与安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p02.html">第二章：调试与运行</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p03.html">第三章：界面与排版</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p04.html">第四章：代码的编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p05.html">第五章：快捷与效率</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p06.html">第六章：搜索与导航</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p07.html">第七章：版本与管理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../chapters/p08.html">第八章：插件与工具</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="c08_01.html">8.1 【插件神器 01】在 PyCharm 中使用 vim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c08_02.html">8.2 【插件神器 02】JetBrains 官方推出了汉化插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c08_03.html">8.3 【插件神器 03】在 PyCharm 中写 Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c08_04.html">8.4 【插件神器 04】正则表达式测试：Regex Tester</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c08_05.html">8.5 【绝佳工具 01】在Windows上使用 Bash 命令</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c08_06.html">8.6 【绝佳工具 02】代码不规范？试试自动化 PEP8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c08_07.html">8.7 【绝佳工具 03】HTTP接口调试：Test RESTful Web Service</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.8 【绝佳工具 04】选择执行：Execute Selection in Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c08_09.html">8.9 【绝佳工具 05】一键进行代码性能分析</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c08_10.html">8.10 【绝佳工具 06】开启静态代码分析检查</a></li>
+<li class="toctree-l2"><a class="reference internal" href="c08_11.html">8.11 【绝佳工具 07】在 PyCharm 运行 Jupyter Notebook</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/p09.html">第九章：常用的技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aboutme.html">关于作者</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Roadmap</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PyCharm 中文指南</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../chapters/p08.html">第八章：插件与工具</a> &raquo;</li>
+        
+      <li>8.8 【绝佳工具 04】选择执行：Execute Selection in Console</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/c08/c08_08.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="execute-selection-in-console">
+<h1>8.8 【绝佳工具 04】选择执行：Execute Selection in Console<a class="headerlink" href="#execute-selection-in-console" title="Permalink to this headline">¶</a></h1>
+<p><img alt="image0" src="http://image.iswbm.com/20200804124133.png" /></p>
+<p>当你想写一段简单的测试代码时，或许你会这样子</p>
+<ol class="arabic simple">
+<li>使用 Python Shell 直接写。缺点是没有自动补全。</li>
+<li>在 PyCharm 中新开一个文件。缺点是要新创建一个文件，完了后还要删除。</li>
+</ol>
+<p>今天再给大家介绍一种新的方法，可以完全避开上面两种方式的缺点。</p>
+<p>那就是 <code class="docutils literal notranslate"><span class="pre">Execute</span> <span class="pre">Selection</span> <span class="pre">in</span> <span class="pre">Console</span></code>，可以说是 <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">in</span> <span class="pre">Anywhere</span></code>.</p>
+<p>只要在当前文件中，写好代码，然后光标选择后，右键点击
+<code class="docutils literal notranslate"><span class="pre">Execute</span> <span class="pre">Selection</span> <span class="pre">in</span> <span class="pre">Python</span> <span class="pre">Console</span></code> 或者 使用快捷键 option + shift +
+E (windows 上是 alt + shift + E)。</p>
+<p><img alt="image1" src="http://image.iswbm.com/20200825083349.png" /></p>
+<p>接着 PyCharm 就会弹出一个 Python Console 窗口，然后运行你所选择的代码。</p>
+<p><img alt="image2" src="http://image.iswbm.com/20200825083632.png" /></p>
+<p>可以发现其中的一个亮点，就是使用这种方法，PyCharm
+会自动帮我们处理好缩进（我们选择时，前面有缩进，可是在执行时，会自动去掉前面多余的缩进）</p>
+<hr class="docutils" />
+<p><img alt="image3" src="https://open.weixin.qq.com/qr/code?username=idealyard" /></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="c08_09.html" class="btn btn-neutral float-right" title="8.9 【绝佳工具 05】一键进行代码性能分析" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="c08_07.html" class="btn btn-neutral float-left" title="8.7 【绝佳工具 03】HTTP接口调试：Test RESTful Web Service" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Python编程时光
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
