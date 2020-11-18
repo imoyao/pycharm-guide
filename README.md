@@ -14,15 +14,11 @@
 
 在线阅读：http://pycharm.iswbm.com
 
-想要精美排版的 200 页 PDF？
-
-![](http://image.iswbm.com/20200907225516.png)
-
-扫码回复关键字即可领取：
-
-![](http://image.iswbm.com/20200909102757.png)
-
-
+## 部署
+```
+pip install -r requirements.txt
+make html
+```
 
 ## Contents
 

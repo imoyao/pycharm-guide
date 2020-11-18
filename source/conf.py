@@ -128,4 +128,4 @@ release = '2.0'
 version = '2.0'
 
 # Options for extensions.
-disqus_shortname = 'iswbm'  # Add this line to conf.py.
+disqus_shortname = 'imoyao'  # Add this line to conf.py.

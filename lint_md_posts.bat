@@ -1,0 +1,1 @@
+lint-md source\ -f

@@ -24,9 +24,8 @@ Jetbrains
 按表单要求填写即可。
 
 .. figure:: https://images.cnblogs.com/cnblogs_com/fishpro/1453719/o_2002190504031582088525000.jpg
-   :alt: image-20200901215241077
+   :alt: 表单
 
-   image-20200901215241077
 
 等待个一天左右，你的邮箱估计就能收到激活码了。
 
