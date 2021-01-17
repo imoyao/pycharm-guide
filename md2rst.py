@@ -30,9 +30,9 @@ readme_header = '''
     <a href='https://open.weixin.qq.com/qr/code?username=idealyard'><img src='http://img.shields.io/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-30k+-brightgreen'></a>
 </p>
 
-## [项目主页](http://python.iswbm.com/)
+## [项目主页](https://pycharm.masantu.com/)
 
-在线阅读：[Python 编程时光](http://python.iswbm.com/)
+在线阅读：[Python 编程时光](https://pycharm.masantu.com/)
 
 ![](http://image.iswbm.com/20200607130051.png)
 
@@ -72,7 +72,7 @@ def render_index_page(index_info):
     # 写入文件
     with open(index_path, 'w+', encoding="utf-8") as file:
         file.write(readme_header)
-        for chp, info in _index_info:
+        for _, info in _index_info:
             chp_name = info["name"]
             file.write("## " + chp_name + "\n")
             for line in info["contents"]:
@@ -85,7 +85,7 @@ def convert_md5_to_rst(file):
     '''
     转换格式：md5转换成rst
     '''
-    (filename, extension) = os.path.splitext(file)
+    filename, extension = os.path.splitext(file)
     convert_cmd = 'pandoc -V mainfont="SimSun" -f markdown -t rst {md_file} -o {rst_file}'.format(
         md_file=filename + '.md', rst_file=filename + '.rst'
     )
@@ -119,6 +119,7 @@ def init_index_info():
     初始化索引
     '''
     _index_info = {}
+    print(blog_path)
     chapter_dir = os.path.join(blog_path, "chapters")
     os.chdir(chapter_dir)
     for file in os.listdir(chapter_dir):
@@ -143,6 +144,7 @@ def main(index_info):
 
 
 if __name__ == '__main__':
+    print('0000---')
     index_info = init_index_info()
     print(index_info, '----------')
     main(index_info)
